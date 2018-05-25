@@ -1,0 +1,281 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    height: 100%;
+}
+.hidden {
+    display: none !important;
+}
+
+#slider:hover > .arrowButton {
+    visibility: visible;
+}
+
+.text {
+    display: block;
+}
+
+.altText {
+    display: none;
+}
+
+/* Navigation*/
+
+header {
+    height: 530px;
+}
+
+.navigation {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #333;
+    width: 100%;
+    height: 5em;
+    z-index: 2000;
+    
+}
+.navigationMenu {
+    max-width: 960px;
+    min-width: 300px;
+    position: relative;
+    height: 100%;
+    width: 80%;
+    background-color: #333333;
+    margin: auto;
+}
+
+.linkField{
+    height: 0px;
+    transition: height 1s ease-in-out;
+}
+
+.navigationMenu ul li {
+    float: right;
+    list-style-type: none;
+    margin: 26px auto;
+}
+
+.navigationMenu ul li a{
+    position: relative;
+    text-decoration: none;
+    padding: 25px 20px;
+    font-size: 1.5em;
+    text-align: left;
+    color: white;
+}
+
+.logo{
+    position: relative;
+    float: left;
+    height: 70%;
+    top: 15%;
+    transition: left 0.5s ease-in-out;
+}
+
+.navigationMenu .icon{
+    display:none;
+}
+.navigationMenu a:hover, .icon:hover{
+    background-color: #2D2D2D;
+    color: white;
+}
+
+/* Navigations Ende */
+
+/* Titel */
+
+#titel {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    top: 80px;
+    height: 150px;
+    width: 100%;
+}
+
+#titel h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+}
+/* Titel Ende */
+
+/* Slider beginn */
+
+#sliderBackground {
+    overflow: hidden;
+    position: relative;
+    top: 80px;
+    height: 300px;
+    background-color: #222222;
+    transition: height 0.3s ease-in-out;
+}
+
+#slider{
+    position: relative;
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: 1500px;
+}
+
+#slider img {
+    height: 350px;
+    width: 100%;
+}
+
+
+#slider .arrowButton{
+    position: relative;
+    height: 90px;
+    width: 90px;
+    background:url('bilder/next-button.png') no-repeat center center;
+    border-style: none;
+}
+
+#slider .arrowButton{
+    visibility: hidden;
+}
+
+#previous {
+    transform: rotate(180deg);
+    top: -230px
+}
+#next {
+    top: -230px;
+    float: right;
+    max-width: right;
+}
+
+.button {
+    height: 10px;
+    width: 10px;
+    background-color: lightblue;
+    position: relative;
+    left: 580px;
+    bottom: 100px;
+    margin: auto;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.activeSlide{
+    background-color:blue;
+}
+
+/* Slider Ende */
+
+/* Main beginn */
+
+/* Youtube beginn */
+
+/* #youtube {
+    height: 300px;
+    background-color: green;
+    width: 100%;
+    position: relative;
+}
+
+#youtube h3 {
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+iframe {
+    position: relative;
+    height: 90%;
+    margin: 0 5%;
+} */
+/* Youtube Ende */
+
+/* Main Ende */
+
+
+/* Mediaqueue 960px */
+
+@media screen and (max-width: 960px)
+{
+    /* Navigation Mediaqueue */ 
+
+    .navigationMenu a{display:none}
+    .navigationMenu .icon{
+        display: block;
+        float: right;
+        height: 100%;
+        width: 5em;
+    }
+
+    .linkField.responsive {
+        position: relative;
+        overflow: hidden;
+        clear:both;
+        background-color: #333;
+        display: block;
+        width: 75%;
+        left: 25%;
+        height: 500%;
+        border-top-style: solid;
+        border-width: 3px;
+        border-color: white;
+    }
+    
+
+    .linkField.responsive li{
+        display: block;
+        clear:both;
+        float:none;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: #222;
+        margin: 30px 0px 0px 15%;
+        width: 71%;
+        
+ 
+    }
+    
+    .linkField.responsive li:first-of-type{
+        margin: 50px 0px 0 15%;
+    }
+    
+    
+    .linkField.responsive a{
+
+        padding: 10px 0 10px 25px;
+        position: relative;
+        top: 6.1%;
+        display: block;
+    }
+
+    /* Navigation Mediaqueue Ende */ 
+
+    /* Titel Mediaqueue */
+
+    .altText {
+        display: block;
+    }
+
+    .text {
+        display: none;
+    }
+
+    /* Titel Mediaqueu Ende */
+
+    /* Slider Mediaqueue */
+
+    header {
+        height: 580px;
+    }
+
+    #sliderBackground {
+        height: 350px;
+        overflow: hidden;
+    }
+
+    .button {
+        bottom: 50px;
+    }
+
+    /* Slider Mediaqueue Ende */
+}

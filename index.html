@@ -47,7 +47,12 @@
         </div>
         <div id = "sliderBackground">
             <div id = "slider">
-                <img src="bilder/berg1[1500x350].jpeg">
+                <img setsrc="bilder/berg1[750x350].jpeg 751w,
+                            bilder/berg1[1500x350].jpeg 1500w"
+                     sizes="(max-width: 920px) 750px,
+                            1500px"
+                    src= "bilder/berg1[1500x350].jpeg">
+
                 <!-- <img src="bilder/berg1[1500x300].jpeg">
                 <img src="bilder/berg1[1500x350].jpeg"> -->
                 <button class= "arrowButton" id = "previous" onclick="p1.previousSlide()"></button>
@@ -56,13 +61,22 @@
         </div>
     </header>
     <main>
-            <h3>
-                Youtube
-            </h3>
+        <h3>
+            Youtube
+        </h3>
         <section id="articleBackground">
-            <img src="bilder/sc2-gameplay-zerg.jpg"/><img src="bilder/sc2-casts.jpg"/><img src="bilder/campaign2.jpg"/><img src="bilder/scremasterd.jpg"/>
-        </section>  
-
+            <a href="https://google.com">
+                <img src="bilder/sc2-gameplay-zerg.jpg"/>
+            </a><a href="https://google.com">
+                <img src="bilder/sc2-casts.jpg"/>
+            </a>
+            <a href="https://google.com">
+                <img src="bilder/campaign2.jpg"/>
+            </a>
+            <a href="https://google.com">
+                <img src="bilder/scremasterd.jpg"/>
+            </a>
+        </section>
     </main>
 </body>
 </html>

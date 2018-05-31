@@ -89,5 +89,5 @@ class mySlide {
 
 
 const p1 = new mySlide;
-p1.initialiseButton();
+// p1.initialiseButton();
 p1.idle();

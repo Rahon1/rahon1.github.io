@@ -177,9 +177,10 @@ header {
 
 /* article */
 
-main > h3 {
+main h3 {
     position: relative;
-    width: 70%;
+    width: 80%;
+    max-width: 960px;
     text-align: center;
     border-bottom-style: ridge;
     border-color: gray;
@@ -226,6 +227,48 @@ main > h3 {
 #articleBackground img:hover{
     background-color: yellow;
 }
+
+/* twitch */
+
+#twitchText {
+    top: 80px;
+}
+#twitchBackground {
+    position: relative;
+    top: 130px;
+    margin: auto;
+    display: block;
+    height: 30%;
+    width: 80%;
+    max-width: 960px;
+    background-color: lightgrey;
+}
+
+#twitchBackground p{
+    text-align: center;
+    line-height: 4em;
+}
+
+#twitchBackground p:first-of-type{
+    padding-top: 30px;
+}
+
+#twitchBackground a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 150px;
+    border: solid 1px grey;
+    border-radius: 10px;
+}
+
+#twitchBackground a:hover {
+    background-color: grey;
+}
+
 /* Main Ende */
 
 
@@ -284,8 +327,6 @@ main > h3 {
         display: block;
     }
 
-    /* Navigation Mediaqueue Ende */ 
-
     /* Titel Mediaqueue */
 
     .altText {
@@ -295,8 +336,6 @@ main > h3 {
     .text {
         display: none;
     }
-
-    /* Titel Mediaqueu Ende */
 
     /* Slider Mediaqueue */
 
@@ -309,10 +348,13 @@ main > h3 {
         overflow: hidden;
     }
 
+    #slider img {
+        width: 750px;
+    }
+
     .button {
         bottom: 50px;
     }
-    /* Slider Mediaqueue Ende */
 
     /* Youtube */
 
@@ -321,18 +363,40 @@ main > h3 {
         width: 50%;
         }
             
-    /* Youtube Ende */
+
+    /* Twitch */
+
+    #twitchBackground {
+        height: 45%;
+    }
     
 }
 
 @media screen and (max-width: 462px) {
 
-        /* Youtube */
+    /* slider */
+
+    #slider{
+      width:100%;
+
+    }
+
+    #slider img {
+        width: 435px;
+    }
+
+    /* Youtube */
    
      #articleBackground a {
         height: 25%;
         width: 100%;
   
     }
-        /* Youtube Ende */
+
+    /*Twitch*/
+
+    #twitchBackground {
+        height: 45%;
+    }
+   
 }

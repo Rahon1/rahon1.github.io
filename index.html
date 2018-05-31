@@ -47,14 +47,16 @@
         </div>
         <div id = "sliderBackground">
             <div id = "slider">
-                <img setsrc="bilder/berg1[750x350].jpeg 751w,
+                <img srcset="bilder/berg1[435x350].jpeg 445w,
+                            bilder/berg1[750x350].jpeg 751w,
                             bilder/berg1[1500x350].jpeg 1500w"
-                     sizes="(max-width: 920px) 750px,
-                            1500px"
-                    src= "bilder/berg1[1500x350].jpeg">
-
+                     sizes="(max-width:462px) 435px,
+                            (max-width:960px) 750px,
+                            1500px">
+                            
                 <!-- <img src="bilder/berg1[1500x300].jpeg">
                 <img src="bilder/berg1[1500x350].jpeg"> -->
+
                 <button class= "arrowButton" id = "previous" onclick="p1.previousSlide()"></button>
                 <button class= "arrowButton" id = "next" onclick="p1.nextSlide()"></button> 
             </div> 
@@ -76,6 +78,14 @@
             <a href="https://google.com">
                 <img src="bilder/scremasterd.jpg"/>
             </a>
+        </section>
+        <h3 id="twitchText">
+            Twitch
+        </h3>
+        <section id="twitchBackground">
+            <p> Chris usually never streams live on Twitch on Monday-Saturday from 14:00-20:00 CET.</p>
+            <p> However, make sure to follow on Twitch to receive notifications when the channel goes live.</p>
+            <a href="https://twitch.tv/Rahon">Chris on Twitch</a>
         </section>
     </main>
 </body>

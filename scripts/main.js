@@ -7,6 +7,77 @@ function navigation() {
         button.className = "linkField";
 }
 
+
+var backgroundResize1 = function() {
+
+    var element = document.querySelector("#articleBackground");
+    element.style.height = element.offsetWidth * 0.14;
+}
+
+var backgroundResize2 = function() {
+    var element = document.querySelector("#articleBackground");
+    element.style.height = element.offsetWidth * 0.50;
+}
+
+var backgroundResize3 = function() {
+    var element = document.querySelector("#articleBackground");
+    element.style.height = element.offsetWidth * 2;
+}
+
+
+var mql_462 = window.matchMedia("(max-width:462px)");
+var mql_960 = window.matchMedia("(min-width: 463px) and (max-width: 960px)");
+
+if(mql_960.matches)
+{   
+    console.log("This should only happen once 1");
+    window.onload = backgroundResize2;
+    window.addEventListener("resize", backgroundResize2);
+}
+
+else if(mql_462.matches)
+{
+    console.log("This should only happen once 3");
+    window.onload = backgroundResize3;
+    window.addEventListener("resize", backgroundResize3);
+}
+else 
+{
+    console.log("This should only happen once 2");
+    window.onload = backgroundResize1;
+    window.addEventListener("resize", backgroundResize1)
+}
+
+mql_960.addListener(refreshResize);
+
+function refreshResize(){
+
+    if(mql_960.matches)
+    {   
+        console.log("match");
+        window.removeEventListener("resize", backgroundResize1);
+        window.removeEventListener("resize", backgroundResize3);
+        window.addEventListener("resize", backgroundResize2);
+
+    }   
+    else if(mql_462.matches)
+    {   
+        console.log("match");
+        window.removeEventListener("resize", backgroundResize1);
+        window.removeEventListener("resize", backgroundResize2);
+        window.addEventListener("resize", backgroundResize3);
+
+    }
+    else
+    {   
+        console.log("doesnt match");
+        window.addEventListener("resize", backgroundResize1);
+    }
+}
+
+
+/* Spielplatz */
+
 // var mql = window.matchMedia("(max-width:960px)");
 
 // mql.addListener(pictureResolutinChange);

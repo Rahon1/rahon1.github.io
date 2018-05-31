@@ -56,7 +56,7 @@ class mySlide {
 
     idle() {
         
-        console.log(this.idleCounter);
+        // console.log(this.idleCounter);
 
 		var that = this;
 		
@@ -80,7 +80,6 @@ class mySlide {
             this.checkbox[i].addEventListener("click", function(i){
                 return function()
                 {
-                    console.log(i);
                     p1.setSlideActive(i);
                 }
             }(i));
